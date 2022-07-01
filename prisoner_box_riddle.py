@@ -20,7 +20,7 @@ def all_prisoners_found_their_number(position_of_scrambled_numbers):
 
         number_in_box = position_of_scrambled_numbers.get(prisoner)
 
-        while (number_in_box != prisoner) and (boxes_opened < num_of_prisoners / 2):
+        while (number_in_box != prisoner) and (boxes_opened < (num_of_prisoners / 2) - 1):
             number_in_box = position_of_scrambled_numbers.get(number_in_box)
             boxes_opened += 1
 
