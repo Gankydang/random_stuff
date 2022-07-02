@@ -1,7 +1,7 @@
 import random
 
 num_of_prisoners = 100
-num_of_trials = 100000
+num_of_trials = 1000
 
 def scramble_numbers():
     position_of_scrambled_numbers = {}
@@ -15,9 +15,8 @@ def scramble_numbers():
 def all_prisoners_found_their_number(position_of_scrambled_numbers):
 
     for prisoner in range(1, num_of_prisoners + 1):
-        number_in_box = 0
-        boxes_opened = 0
 
+        boxes_opened = 0
         number_in_box = position_of_scrambled_numbers.get(prisoner)
 
         while (number_in_box != prisoner) and (boxes_opened < (num_of_prisoners / 2) - 1):
