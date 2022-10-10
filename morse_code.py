@@ -1,5 +1,3 @@
-import re
-
 morse_dict = {
     ' ': '/',
     'a': '.-',
