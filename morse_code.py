@@ -48,7 +48,7 @@ sequence = input(f'Enter a sequence to {mode}: ').lower().strip()
 
 if mode == 'encode':
     encoded_seq = []
-    sequence = ''.join(re.split(r"\W|_", sequence))
+    sequence = re.sub("[.,?!:'\"]", '', sequence)
     for char in sequence:
         encoded_seq.append(morse_dict[char])
 
