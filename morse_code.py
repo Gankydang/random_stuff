@@ -1,3 +1,5 @@
+import re
+
 morse_dict = {
     ' ': '/',
     'a': '.-',
@@ -46,6 +48,7 @@ sequence = input(f'Enter a sequence to {mode}: ').lower().strip()
 
 if mode == 'encode':
     encoded_seq = []
+    sequence = ''.join(re.split("[.,?!':]", sequence))
     for char in sequence:
         encoded_seq.append(morse_dict[char])
 
