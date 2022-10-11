@@ -57,12 +57,8 @@ if mode == 'encode':
 
 else:
     decoded_seq = []
-    flipped_morse_dict = {}
+    flipped_morse_dict = {value: key for key, value in morse_dict.items()}
     sequence = sequence.split()
-
-    for key in morse_dict.keys():
-        val = morse_dict[key]
-        flipped_morse_dict[val] = key
 
     for morse_code in sequence:
         decoded_seq.append(flipped_morse_dict[morse_code])
