@@ -19,7 +19,7 @@ driver.get('https://web.whatsapp.com/')
 
 chat_name = 'SuPeR' # CHANGE ACCORDING TO THE CHAT NAME YOU WANT TO SPAM
 
-chat_image_xp = f'//*[contains(text(), {chat_name})]'
+chat_image_xp = f'//*[contains(text(), "{chat_name}")]'
 chat_image_elem = find_elem(By.XPATH, chat_image_xp)
 sleep(3)
 chat_image_elem.click()
