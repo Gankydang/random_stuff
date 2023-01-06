@@ -1,6 +1,5 @@
 import random
 
-
 def makeBoard():
     bo = []
     for y in range(4):
