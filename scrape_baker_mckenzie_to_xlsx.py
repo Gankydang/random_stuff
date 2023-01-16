@@ -62,7 +62,7 @@ def get_countries(driver):
     all_options = element.find_elements(By.TAG_NAME, 'option')
     for option in all_options:
         country_li.append(option.get_attribute('text'))
-    country_li = country_li[2:3]
+    country_li = country_li[2:]
     return country_li
 
 def get_topics_url(driver):
@@ -70,7 +70,7 @@ def get_topics_url(driver):
     a_elems = driver.find_elements(By.XPATH, '//*[@class = "tree-navigation__list"]//a')
     for a in a_elems:
         topic_li.append(a.get_attribute('href'))
-    topic_li = topic_li[2:3]
+    topic_li = topic_li[2:]
     return topic_li
 
 def df_style(val):
