@@ -4,7 +4,8 @@ from time import sleep
 
 driver = webdriver.Chrome()
 driver.get('https://monkeytype.com/')
-driver.find_element(By.XPATH, '//*[@id="cookiePopup"]/div[2]/div[2]/div[2]').click()
+sleep(5)
+driver.find_element(By.XPATH, "//*[@mode='words']").click()
 sleep(0.5)
 driver.find_element(By.XPATH, '//*[@id="testConfig"]/div/div[3]/div[2]').click()
 sleep(0.5)
